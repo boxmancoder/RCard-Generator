@@ -1,67 +1,57 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
-  background-color: #4caf50;
+  background-color: #4CAF50;
+  margin: 0; /* Ensure there's no default margin on the body */
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   background-color: white;
   border-radius: 15px;
-  position: relative;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.top-suit,
-.bottom-suit {
   display: flex;
-  position: absolute;
-  width: 50%;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.top-suit {
-  top: 0;
-  left: 0;
-}
-
-.bottom-suit {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
+.top-suit, .bottom-suit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
 }
 
 .middle-value {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-}
-
-#top-icon,
-#bottom-icon {
-  color: red;
+  font-size: 24px;
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 30px; /* Adjust the space between the card and button */
   padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
   background-color: #333;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #555;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

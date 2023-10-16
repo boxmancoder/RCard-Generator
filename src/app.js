@@ -40,9 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
     if (randomSuit === "Spades" || randomSuit === "Clubs") {
       document.getElementById("top-icon").style.color = "black";
       document.getElementById("bottom-icon").style.color = "black";
+      document.getElementById("middle-value").style.color = "black"; // Added this line
     } else {
       document.getElementById("top-icon").style.color = "red";
       document.getElementById("bottom-icon").style.color = "red";
+      document.getElementById("middle-value").style.color = "red"; // Added this line
     }
   }
 
