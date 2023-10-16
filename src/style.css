@@ -1,65 +1,49 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 body {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh;
   background-color: #4caf50;
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 150px;
+  height: 200px;
   background-color: white;
   border-radius: 15px;
-  position: relative;
-  font-size: 24px;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Added to position the suits and values correctly */
 }
 
 .top-suit,
 .bottom-suit {
+  width: 100%;
   display: flex;
-  position: absolute;
-  width: 50%;
   justify-content: space-between;
-  padding: 10px;
-}
-
-.top-suit {
-  top: 0;
-  left: 0;
-}
-
-.bottom-suit {
-  bottom: 0;
-  right: 0;
-  transform: rotate(180deg);
+  padding: 0 10px;
 }
 
 .middle-value {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-}
-
-#top-icon,
-#bottom-icon {
-  color: red;
+  font-size: 24px;
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 30px; /* This provides the spacing between the card and the button */
   padding: 10px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
   background-color: #333;
   color: white;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
