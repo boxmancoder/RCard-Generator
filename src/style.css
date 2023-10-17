@@ -6,54 +6,43 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #4caf50;
+  background-color: rgb(20, 212, 20);
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 400px;
+  height: 600px;
   background-color: white;
   border-radius: 15px;
   position: relative;
-  font-size: 24px;
-  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.top-suit,
-.bottom-suit {
-  display: flex;
+.top-left,
+.bottom-right {
   position: absolute;
-  width: 50%;
-  justify-content: space-between;
-  padding: 10px;
+  font-size: 60px;
 }
 
-.top-suit {
-  top: 0;
-  left: 0;
+.top-left {
+  top: 20px;
+  left: 20px;
 }
 
-.bottom-suit {
-  bottom: 0;
-  right: 0;
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
   transform: rotate(180deg);
 }
 
-.middle-value {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 48px;
-}
-
-#top-icon,
-#bottom-icon {
-  color: red;
+.center-value {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 230px;
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 30px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -66,4 +55,16 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between child elements */
+  margin-left: 10px; /* Spacing from the left of the page */
+  margin-bottom: 10px; /* Spacing between the container and the button below */
+}
+
+#setSize {
+  margin-bottom: 20px; /* adjust this value to your preference */
 }
