@@ -3,10 +3,42 @@ import "bootstrap";
 import "./style.css";
 
 document.addEventListener("DOMContentLoaded", function() {
-  // ... (rest of your existing variables and functions)
+  const values = [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "King",
+    "Queen",
+    "Jack",
+    "Ace"
+  ];
+  const suits = {
+    Hearts: "♥",
+    Spades: "♠",
+    Clubs: "♣",
+    Diamonds: "♦"
+  };
 
   function generateRandomCard() {
-    // ... (existing code inside this function)
+    const randomValue = values[Math.floor(Math.random() * values.length)];
+    const randomSuit = Object.keys(suits)[Math.floor(Math.random() * 4)];
+    const suitIcon = suits[randomSuit];
+
+    document.getElementById("center-value").textContent = randomValue;
+    document.getElementById("top-icon").textContent = suitIcon;
+    document.getElementById("bottom-icon").textContent = suitIcon;
+
+    if (randomSuit === "Spades" || randomSuit === "Clubs") {
+      document.querySelector(".card").style.color = "black";
+    } else {
+      document.querySelector(".card").style.color = "red";
+    }
   }
 
   function setCardSize() {
@@ -20,11 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-  // Existing code for generating the initial card and setting the interval
   generateRandomCard();
   setInterval(generateRandomCard, 10000);
 
-  // Event listeners for buttons
   document
     .getElementById("generateCard")
     .addEventListener("click", generateRandomCard);

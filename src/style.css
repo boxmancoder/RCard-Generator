@@ -60,11 +60,11 @@ button:hover {
 .input-container {
   display: flex;
   align-items: center;
-  gap: 10px; /* Spacing between child elements */
-  margin-left: 10px; /* Spacing from the left of the page */
-  margin-bottom: 10px; /* Spacing between the container and the button below */
+  gap: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
 #setSize {
-  margin-bottom: 20px; /* adjust this value to your preference */
+  margin-bottom: 20px;
 }
