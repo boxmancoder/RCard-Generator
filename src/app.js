@@ -35,23 +35,15 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("bottom-icon").textContent = suitIcon;
 
     if (randomSuit === "Spades" || randomSuit === "Clubs") {
-      document.querySelector(".card").style.color = "black";
+      document.getElementById("top-icon").style.color = "black";
+      document.getElementById("bottom-icon").style.color = "black";
     } else {
-      document.querySelector(".card").style.color = "red";
+      document.getElementById("top-icon").style.color = "red";
+      document.getElementById("bottom-icon").style.color = "red";
     }
   }
 
-  function setCardSize() {
-    const width = document.getElementById("widthInput").value;
-    const height = document.getElementById("heightInput").value;
-    const card = document.querySelector(".card");
-
-    if (width && height) {
-      card.style.width = `${width}px`;
-      card.style.height = `${height}px`;
-    }
-  }
-
+  // Generate the card when the page loads
   generateRandomCard();
   setInterval(generateRandomCard, 10000);
 
