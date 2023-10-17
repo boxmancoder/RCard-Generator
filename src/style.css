@@ -1,41 +1,49 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #4caf50;
+  background-color: rgb(20, 212, 20);
+  padding-left: 20px;
 }
 
 .card {
-  width: 150px;
-  height: 200px;
+  width: 400px;
+  height: 600px;
   background-color: white;
   border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 0;
+  position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  position: relative; /* Added to position the suits and values correctly */
 }
 
-.top-suit,
-.bottom-suit {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
+.top-left,
+.bottom-right {
+  position: absolute;
+  font-size: 60px;
 }
 
-.middle-value {
-  font-size: 24px;
+.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  transform: rotate(180deg);
+}
+
+.center-value {
+  font-size: 100px;
+  text-align: center;
+  margin-top: 230px;
 }
 
 button {
-  margin-top: 30px; /* This provides the spacing between the card and the button */
+  margin-top: 30px;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
@@ -48,4 +56,23 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+#setSize {
+  margin-bottom: 20px; /* adjust this value to your preference */
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between child elements */
+  margin-left: 10px; /* Spacing from the left of the page */
+  margin-bottom: 10px; /* Spacing between the container and the button below */
+}
+
+.input-container input {
+  flex: 1; /* Allows the inputs to take equal widths */
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
